@@ -112,7 +112,6 @@ public class iterativeSearch {
 		// code follows the same structure as above
 		double linImpStartTime = System.nanoTime();
 		int linImpResult = linSearchImprove(values, searchKey);
-		System.out.println(linImpResult);
 		if (linImpResult != -1) {	
 			System.out.println("LINEAR IMPROVED:\nSearch key found at index " + linImpResult);
 			} else System.out.println("Search key not found.");
