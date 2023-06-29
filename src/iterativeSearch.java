@@ -108,6 +108,17 @@ public class iterativeSearch {
 		// divide by 1000000 to convert from nanoseconds to milliseconds
 		System.out.println("Execution time: " + ((linearEndTime- linearStartTime) / 1000000) + " milliseconds.\n");
 		
+		// results for improved linear algorithm
+		// code follows the same structure as above
+		double linImpStartTime = System.nanoTime();
+		int linImpResult = linSearchImprove(values, searchKey);
+		System.out.println(linImpResult);
+		if (linImpResult != -1) {	
+			System.out.println("LINEAR IMPROVED:\nSearch key found at index " + linImpResult);
+			} else System.out.println("Search key not found.");
+		double linImpEndTime = System.nanoTime();
+		System.out.println("Execution time: " + ((linImpEndTime- linImpStartTime) / 1000000) + " milliseconds.\n");
+		
 		// results for interpolation algorithm
 		// code follows the same structure as above
 		double interStartTime = System.nanoTime();
@@ -118,15 +129,7 @@ public class iterativeSearch {
 		double interEndTime = System.nanoTime();
 		System.out.println("Execution time: " + ((interEndTime- interStartTime) / 1000000) + " milliseconds.\n");
 		
-		// results for improved linear algorithm
-		// code follows the same structure as above
-		double linImpStartTime = System.nanoTime();
-		int linImpResult = linSearchImprove(values, searchKey);
-		if (linImpResult != -1) {	
-			System.out.println("LINEAR IMPROVED:\nSearch key found at index " + linImpResult);
-			} else System.out.println("Search key not found.");
-		double linImpEndTime = System.nanoTime();
-		System.out.println("Execution time: " + ((linImpEndTime- linImpStartTime) / 1000000) + " milliseconds.\n");
+
 	}
 	
 		
